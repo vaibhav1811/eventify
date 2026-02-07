@@ -1,0 +1,19 @@
+# Global
+.DS_Store
+*.log
+
+# Environment Variables (CRITICAL)
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/

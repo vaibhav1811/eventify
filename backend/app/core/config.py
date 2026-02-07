@@ -1,12 +1,15 @@
 from pydantic_settings import BaseSettings
+from typing import List
 
 class Settings(BaseSettings):
+    PROJECT_NAME: str = "Eventify Cards"
     MONGODB_URL: str
-    DATABASE_NAME: str = "eventify"
+    CORS_ORIGINS: List[str] = ["*"]
     CLOUDINARY_URL: str = ""
-    SECRET_KEY: str = "secret"
+    SECRET_KEY: str = ""
 
     class Config:
+        case_sensitive = True
         env_file = ".env"
 
 settings = Settings()

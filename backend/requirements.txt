@@ -6,3 +6,5 @@ pydantic-settings
 python-dotenv
 python-multipart
 mangum
+email-validator
+certifi

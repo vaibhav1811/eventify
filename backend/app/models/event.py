@@ -11,8 +11,9 @@ class EventBase(BaseModel):
     location_name: str
     location_coordinates: Optional[dict] = None
     images: List[str] = []
-    theme: Optional[dict] = None
+    theme: Optional[str] = None
     custom_message: Optional[str] = None
+    itinerary: Optional[List[dict]] = None
 
 class EventCreate(EventBase):
     pass
@@ -24,15 +25,16 @@ class EventUpdate(BaseModel):
     location_name: Optional[str] = None
     location_coordinates: Optional[dict] = None
     images: Optional[List[str]] = None
-    theme: Optional[dict] = None
+    theme: Optional[str] = None
     custom_message: Optional[str] = None
+    itinerary: Optional[List[dict]] = None
 
 class EventDB(EventBase):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)
     slug: str
     edit_token: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
-    expires_at: datetime
+    expires_at: Optional[datetime] = None
 
     class Config:
         populate_by_name = True
