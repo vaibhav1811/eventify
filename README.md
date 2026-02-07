@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+# eventify
+A website for building your web card, ease up your event invites.
+
+>>>>>>> 4ea7398f64f03c894a363e473db914e9a8c1ff4e
 # Eventify Cards
 
 A frictionless, one-page event invitation platform. Create beautiful, temporary event cards in seconds.
